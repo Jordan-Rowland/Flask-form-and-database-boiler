@@ -1,0 +1,13 @@
+<a href="{{ url_for('addbook') }}"><button>Add a book</button></a>
+<br>
+<br>
+{% for book in books %}
+    <li>{{ book }}</li>
+{% endfor %}
+
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <p>{{ form.id.label }} {{ form.id }}</p>
+    <p>{{ form.remove.label }} {{ form.remove }}</p>
+</form>
